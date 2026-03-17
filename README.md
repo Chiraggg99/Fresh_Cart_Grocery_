@@ -54,7 +54,7 @@ FreshCart is a comprehensive full-stack e-commerce solution tailored for modern 
 │   ├── screenshots/     # Project showcase images
 │   └── index.html       # Single Page Application entry
 ├── server/              # Server-side logic
-│   ├── data/        # Product & Inventory (JSON based)
+│   ├── data/            # Product & Inventory (JSON based)
 │   ├── routes/          # Express API endpoints
 │   └── index.js         # Production-ready Server entry
 ├── vercel.json          # Deployment config for cloud hosting
