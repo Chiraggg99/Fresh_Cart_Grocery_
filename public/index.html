@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FreshCart — Premium online grocery store. Browse fresh fruits, vegetables, dairy, bakery items, beverages, and snacks.">
+  <title>FreshCart — Premium Grocery Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="logo" id="logo">
+        <span class="logo-icon">🛒</span>
+        <span class="logo-text">Fresh<span class="logo-accent">Cart</span></span>
+      </div>
+      <div class="search-bar" id="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search groceries..." autocomplete="off">
+      </div>
+      <button class="cart-btn" id="cart-toggle-btn" aria-label="Open cart">
+        <span class="cart-btn-icon">🛒</span>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Category Navigation -->
+  <nav class="category-nav" id="category-nav">
+    <div class="category-nav-inner">
+      <button class="category-pill active" data-category="all" id="cat-all">All Items</button>
+      <button class="category-pill" data-category="favorites" id="cat-favorites">❤️ Favorites</button>
+      <button class="category-pill" data-category="Fruits" id="cat-fruits">🍎 Fruits</button>
+      <button class="category-pill" data-category="Vegetables" id="cat-vegetables">🥦 Vegetables</button>
+      <button class="category-pill" data-category="Dairy" id="cat-dairy">🧀 Dairy</button>
+      <button class="category-pill" data-category="Bakery" id="cat-bakery">🥖 Bakery</button>
+      <button class="category-pill" data-category="Beverages" id="cat-beverages">🥤 Beverages</button>
+      <button class="category-pill" data-category="Snacks" id="cat-snacks">🍿 Snacks</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main" id="main-content">
+    <!-- Products View -->
+    <section class="products-view active" id="products-view">
+      <div class="section-header">
+        <h1 id="section-title">All Groceries</h1>
+        <div class="header-controls">
+          <span class="product-count" id="product-count">0 items</span>
+          <select class="sort-select" id="sort-select" aria-label="Sort products">
+            <option value="default">Sort by: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name-a-z">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="product-grid">
+        <!-- Product cards populated by JS -->
+      </div>
+    </section>
+
+    <!-- Orders View -->
+    <section class="orders-view" id="orders-view">
+      <div class="section-header">
+        <h1>My Orders</h1>
+      </div>
+      <div class="orders-list" id="orders-list">
+        <!-- Orders populated by JS -->
+      </div>
+    </section>
+
+    <!-- Order Success View -->
+    <section class="order-success-view" id="order-success-view">
+      <div class="success-card" id="success-card">
+        <div class="success-icon">✅</div>
+        <h2>Order Placed Successfully!</h2>
+        <p class="success-order-id" id="success-order-id">Order #1</p>
+        <p class="success-total" id="success-total">Total: ₹0.00</p>
+        <div class="success-actions">
+          <button class="btn btn-primary" id="continue-shopping-btn" style="width: 100%;">Okay, Continue Shopping</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Cart items populated by JS -->
+    </div>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Delivery</span>
+          <span class="free-tag">FREE</span>
+        </div>
+        <div class="cart-summary-row cart-total-row">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+      </div>
+      <button class="btn btn-checkout" id="checkout-btn">
+        <span>Place Order</span>
+        <span class="checkout-arrow">→</span>
+      </button>
+      <button class="btn btn-clear-cart" id="clear-cart-btn">Clear Cart</button>
+    </div>
+    <div class="cart-empty" id="cart-empty">
+      <span class="cart-empty-icon">🛒</span>
+      <p>Your cart is empty</p>
+      <small>Browse our fresh groceries and add items!</small>
+    </div>
+  </aside>
+
+  <!-- Product Details Modal -->
+  <div class="product-overlay" id="product-overlay"></div>
+  <div class="product-modal" id="product-modal">
+    <button class="modal-close-btn" id="product-modal-close" aria-label="Close modal">✕</button>
+    <div class="modal-body" id="product-modal-body">
+      <!-- Content populated by JS -->
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-overlay" id="checkout-overlay"></div>
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-header">
+      <h2>Payment</h2>
+      <button class="checkout-close-btn" id="checkout-close-btn" aria-label="Close checkout">✕</button>
+    </div>
+    
+    <form class="checkout-form" id="checkout-form">
+      <div class="payment-section">
+        <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 8px; text-align: center;">Total Amount to Pay:</p>
+        <div id="checkout-pay-total" style="font-size: 32px; font-weight: 800; color: var(--accent); text-align: center; margin-bottom: 16px;">₹0.00</div>
+      </div>
+
+      <div class="checkout-actions">
+        <button type="submit" class="btn btn-primary btn-pay" id="pay-btn">
+          <span class="pay-text">Pay Now</span>
+          <div class="spinner hidden" id="pay-spinner"></div>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/products.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/orders.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
