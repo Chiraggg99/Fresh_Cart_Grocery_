@@ -7,6 +7,9 @@ FreshCart is a comprehensive full-stack e-commerce solution tailored for modern 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Web-blue)
 ![Stack](https://img.shields.io/badge/stack-Node.js%20%7C%20VanillaJS-orange)
+![Deployment](https://img.shields.io/badge/deployment-Vercel-black.svg?logo=vercel)
+
+### 🌍 [Live Demo: fresh-cart-grocery.vercel.app](https://fresh-cart-grocery.vercel.app)
 
 ## ✨ Highlights
 
@@ -23,6 +26,10 @@ FreshCart is a comprehensive full-stack e-commerce solution tailored for modern 
 
 ## 🛠️ Quick Start
 
+### 🌐 Live Version
+Visit the **[Live Demo](https://fresh-cart-grocery.vercel.app)** to see the app in action instantly.
+
+### 💻 Local Development
 1. **Clone & Install**:
    ```bash
    git clone https://github.com/Chiraggg99/Fresh_Cart_Grocery_.git
@@ -34,6 +41,10 @@ FreshCart is a comprehensive full-stack e-commerce solution tailored for modern 
    npm start
    ```
    Open `http://localhost:3000`
+
+## ☁️ Deployment
+
+This project is optimized for **Vercel**. Every push to the `main` branch is automatically deployed to production. Continuous integration and serverless functions are handled via `vercel.json`.
 
 ## 📸 Showcase
 
