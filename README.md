@@ -7,54 +7,31 @@ FreshCart is a sleek, modern, and high-performance full-stack grocery applicatio
 ![GitHub repo size](https://img.shields.io/github/repo-size/Chiraggg99/Fresh_Cart_Grocery_?color=green)
 ![GitHub license](https://img.shields.io/github/license/Chiraggg99/Fresh_Cart_Grocery_)
 
-## ✨ Key Features
+## ✨ Highlights
 
-- **💎 Premium Design**: Sleek dark mode interface with glassmorphism, vibrant accents, and smooth animations.
-- **🔍 Product Details**: Dedicated modal for every product with detailed descriptions and nutritional stats.
-- **🛍️ Product Discovery**: Browse by categories with real-time search and **Price Sorting** (Low to High / High to Low).
-- **🇮🇳 INR Currency**: Full support for Indian Rupee (₹) with realistic market prices.
-- **⭐ Favorites System**: Quickly save items to your wishlist for later.
-- **🛒 Advanced Cart**: Manage quantities directly from the product cards or the sidebar cart.
-- **⚡ Super-Fast Checkout**: A streamlined 1-click payment simulation—no long forms, just pay and go.
-- **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile devices.
+- **💎 Modern Dark UI**: Premium glassmorphism design with smooth animations.
+- **🇮🇳 Indian Market Ready**: Standard INR (₹) pricing and local product units.
+- **🛍️ Easy Discovery**: Category filters, real-time search, and price sorting.
+- **⚡ Fast Checkout**: Streamlined 1-click payment simulation.
 
 ## 🚀 Tech Stack
 
-- **Frontend**: Vanilla HTML5, CSS3 (Modern Flexbox/Grid), JavaScript (ES6+)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Backend**: Node.js, Express.js
-- **Deployment**: Vercel-ready configuration included.
 
-## 🛠️ Installation & Local Setup
+## 🛠️ Quick Start
 
-Prerequisites: [Node.js](https://nodejs.org/) installed on your machine.
-
-1. **Clone the repository**:
+1. **Clone & Install**:
    ```bash
    git clone https://github.com/Chiraggg99/Fresh_Cart_Grocery_.git
-   cd Fresh_Cart_Grocery_
+   cd Fresh_Cart_Grocery_ && npm install
    ```
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the server**:
+2. **Run**:
    ```bash
    npm start
    ```
-
-4. **Open in your browser**:
-   Navigate to `http://localhost:3000`
-
-## 🔌 API Endpoints (Express)
-
-The backend provides a RESTful API for all grocery operations:
-- `GET /api/products` - Fetch all products (with search/category filters).
-- `GET /api/products/categories` - List available categories.
-- `GET /api/cart` - Retrieve current cart session.
-- `POST /api/cart` - Add an item to the cart.
-- `POST /api/orders` - Simulate order placement.
+   Open `http://localhost:3000`
 
 ## 📸 Showcase
 
