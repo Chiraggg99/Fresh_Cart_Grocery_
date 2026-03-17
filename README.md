@@ -62,7 +62,7 @@ The backend provides a RESTful API for all grocery operations:
   <img src="public/screenshots/homepage.png" width="800" alt="FreshCart Homepage" />
 </p>
 <p align="center">
-  <img src="public/screenshots/product-details.webp" width="400" alt="Product Details" />
+  <img src="public/screenshots/product-details.png" width="400" alt="Product Details" />
   <img src="public/screenshots/checkout.png" width="400" alt="Simplified Checkout" />
 </p>
 
