@@ -31,22 +31,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log('');
-  console.log('  🛒  Grocery App Server Running!');
-  console.log(`  📍  http://localhost:${PORT}`);
-  console.log('');
-  console.log('  API Endpoints:');
-  console.log(`  GET    /api/products          - List all products`);
-  console.log(`  GET    /api/products/:id       - Get product by ID`);
-  console.log(`  GET    /api/products/categories - List categories`);
-  console.log(`  GET    /api/cart               - View cart`);
-  console.log(`  POST   /api/cart               - Add to cart`);
-  console.log(`  PUT    /api/cart/:productId    - Update quantity`);
-  console.log(`  DELETE /api/cart/:productId    - Remove from cart`);
-  console.log(`  DELETE /api/cart               - Clear cart`);
-  console.log(`  POST   /api/orders             - Place order`);
-  console.log(`  GET    /api/orders             - View orders`);
-  console.log('');
-});
+// Start server only if not being imported as a module (e.g., for Vercel)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log('');
+    console.log('  🛒  Grocery App Server Running!');
+    console.log(`  📍  http://localhost:${PORT}`);
+    console.log('');
+  });
+}
+
+// Export the app instance for Vercel serverless functions
+module.exports = app;
