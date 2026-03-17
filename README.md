@@ -2,10 +2,11 @@
 
 ![FreshCart Banner](https://raw.githubusercontent.com/Chiraggg99/Fresh_Cart_Grocery_/main/public/banner.png)
 
-FreshCart is a sleek, modern, and high-performance full-stack grocery application designed for a premium shopping experience. Built with a focus on rich aesthetics, smooth interactions, and a simplified checkout flow.
+FreshCart is a comprehensive full-stack e-commerce solution tailored for modern grocery retail. It combines a high-end, dark-themed user interface with a robust Node.js backend to provide a seamless shopping experience. Built with a primary focus on performance, rich aesthetics (Glassmorphism), and a frictionless checkout flow specifically optimized for the Indian market.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Chiraggg99/Fresh_Cart_Grocery_?color=green)
-![GitHub license](https://img.shields.io/github/license/Chiraggg99/Fresh_Cart_Grocery_)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Web-blue)
+![Stack](https://img.shields.io/badge/stack-Node.js%20%7C%20VanillaJS-orange)
 
 ## ✨ Highlights
 
@@ -16,8 +17,9 @@ FreshCart is a sleek, modern, and high-performance full-stack grocery applicatio
 
 ## 🚀 Tech Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Node.js, Express.js
+- **Frontend**: Custom CSS3 (Glassmorphism, CSS Variables, Flex/Grid architecture), Vanilla ES6+ JavaScript for interactive state management.
+- **Backend**: Node.js with Express.js to handle RESTful API routes for products, cart sessions, and order processing.
+- **Standards**: Semantic HTML5 for SEO, Responsive Design for all devices, and clean MVC-inspired folder structure.
 
 ## 🛠️ Quick Start
 
@@ -46,16 +48,17 @@ FreshCart is a sleek, modern, and high-performance full-stack grocery applicatio
 ## 📦 Project Structure
 
 ```text
-├── public/          # Frontend assets (HTML, CSS, JS)
-│   ├── css/         # Modern styling & animations
-│   ├── js/          # Frontend logic (Cart, Products, API)
-│   └── index.html   # Main application shell
-├── server/          # Node.js/Express backend
-│   ├── data/        # Product and Mock Data
-│   ├── routes/      # API Endpoints
-│   └── index.js     # Server entry point
-├── vercel.json      # Deployment configuration
-└── package.json     # Project dependencies
+├── public/              # Client-side assets and UI
+│   ├── css/             # Design system & component styles
+│   ├── js/              # Client-side logic (API Client, Cart, UI)
+│   ├── screenshots/     # Project showcase images
+│   └── index.html       # Single Page Application entry
+├── server/              # Server-side logic
+│   ├── data/        # Product & Inventory (JSON based)
+│   ├── routes/          # Express API endpoints
+│   └── index.js         # Production-ready Server entry
+├── vercel.json          # Deployment config for cloud hosting
+└── package.json         # Dependency and script management
 ```
 
 ## 📄 License
